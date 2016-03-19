@@ -1,0 +1,58 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "year": "2010",
+      "price": "10999",
+      "color": "GoldenRod",
+      "purchased": false,
+      "description": "This is a pretty sweet whip. AC, moonroof, all the stuff. Comes with a childseat and a child."
+    },
+    {
+      "make": "Lincoln",
+      "model": "Towncar",
+      "year": "2002",
+      "price": "3999",
+      "color": "Black",
+      "purchased": false,
+      "description": "This is a former gypsy cab. Lots of character. It has been auctioned off at least times by the Metro Police Dept."
+    },
+        {
+      "make": "Porche",
+      "model": "911",
+      "year": "1980",
+      "price": "5999",
+      "color": "Grey",
+      "purchased": false,
+      "description": "The car every generation X-er wanted as a kid. Thank you Miami Vice."
+    },
+        {
+      "make": "Hummer",
+      "model": "H2",
+      "year": "2009",
+      "price": "30999",
+      "color": "Yellow",
+      "purchased": true,
+      "description": "We have one of these, but it's not for sale. We're going to light it on fire because that's what they all deserve."
+    },
+        {
+      "make": "Grumman",
+      "model": "LLV",
+      "year": "1996",
+      "price": "500",
+      "color": "WhiteSmoke",
+      "purchased": false,
+      "description": "This is a mail truck. Grumman, as in Northrop Grumman, makes them. LLV stands for Long Life Vehicle."
+    }
+  ]
+}
