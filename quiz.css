@@ -1,12 +1,7 @@
-. {
-    box-sizing: border-box;
+.col-md-4 {
+    text-align: center;
 }
 
-.car {
-    float: left;
-    width: 300px;
-    border: 2px dashed black;
-    margin: 1%;
-    text-align: center;
-
+#selected {
+    border: 6px groove red;
 }
