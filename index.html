@@ -6,25 +6,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-<!-- Here's my NavBar -->
+
+<!-- Here's my Bootstrap NavBar -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <form class="navbar-form navbar-left" role="search">
+                <div class="navbar-form navbar-left" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Change description">
+                        <input type="text" id="input" class="form-control" placeholder="Change description">
                     </div>  
-                    <button type="submit" class="btn btn-default">Boo-ya!</button>
-                </form>
+                    <button class="btn btn-default">Boo-ya!</button>
+                </div>
             </div>
         </div>
     </nav>
+
 <!-- Here's my container for all cars -->
     <div id="main-container" class="container">
     </div>
+
+<!-- JS scripts.  -->
     <script type="text/javascript" src="CarLot.js"></script>
-    <script type="text/javascript" src="loadInventory.js"></script>
-    <script type="text/javascript" src="iife2.js"></script>
+    <script type="text/javascript" src="activateEvents.js"></script>
+    <script type="text/javascript" src="selectedFunctions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
