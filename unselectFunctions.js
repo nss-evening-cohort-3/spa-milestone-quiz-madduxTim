@@ -8,7 +8,7 @@
 //     - A color name.
 
 var CarLot = (function(originalCarLot) {
-    originalCarLot.selectCar = function(inventory) {
+    originalCarLot.resetCars = function(inventory) {
         let container = document.getElementById("main-container");
         let bacon = document.getElementsByClassName("car");
         for (let i = 0; i < container.childNodes.length; i++) {
@@ -23,4 +23,4 @@ var CarLot = (function(originalCarLot) {
     };
     return originalCarLot;
 })(CarLot || {});
-CarLot.loadInventory(CarLot.selectCar);
+CarLot.loadInventory(CarLot.resetCars);

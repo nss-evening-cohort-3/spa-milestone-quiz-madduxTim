@@ -3,7 +3,7 @@
 // function that creates all of the `eventHandlers` that you need for 
 // the application. Name the function `activateEvents`.
 
-function makeCarsShow() {
+function showContent() {
   let carInventory = CarLot.getInventory();
   toDOM(carInventory);
 };
@@ -23,8 +23,25 @@ function toDOM(inventory) {
   container.innerHTML = string;
   activateEvents();
 };
-
 function activateEvents() {
   console.log("not sure what goes here yet");
-}
-CarLot.loadInventory(makeCarsShow);
+};
+CarLot.loadInventory(showContent);
+
+var CarLot = (function(originalCarLot) {
+    originalCarLot.selectCar = function(inventory) {
+        let container = document.getElementById("main-container");
+        let bacon = document.getElementsByClassName("car");
+        for (let i = 0; i < container.childNodes.length; i++) {
+            let clickedCar = container.childNodes[i];
+            container.childNodes[i].addEventListener("click", function(event) {
+            input.value="";
+            input.focus();
+            clickedCar.style.background="lightblue";
+            clickedCar.style.borderWidth="6px";
+            });
+        }
+    };
+    return originalCarLot;
+})(CarLot || {});
+CarLot.loadInventory(CarLot.selectCar);

@@ -11,7 +11,7 @@ var CarLot = (function () {
   return {
     getInventory: function() {
       console.log("getInventory is working", inventory);
-      return inventory/*.cars */;
+      return inventory;
     },
     loadInventory: function(accessInventory) {
       var inventoryLoader = new XMLHttpRequest();
