@@ -20,9 +20,8 @@ var CarLot = (function () {
       inventoryLoader.addEventListener("load", function () {
         // experiment with "failed" event?
           inventory = JSON.parse(this.responseText).cars;
-          accessInventory();
+          accessInventory(inventory);
       });
     }
   };
 })();
-

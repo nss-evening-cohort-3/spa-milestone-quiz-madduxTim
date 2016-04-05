@@ -2,3 +2,7 @@
     text-align: center;
 }
 
+.selected {
+    background-color: lightblue;
+    border-width: 4px solid;
+}
