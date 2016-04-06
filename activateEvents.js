@@ -1,14 +1,18 @@
 "use strict"
-// The second IIFE should augment the original one with a 
-// function that creates all of the `eventHandlers` that you need for 
-// the application. Name the function `activateEvents`.
+//The second IIFE should augment the original one with a 
+//function that creates all of the `eventHandlers` that you need for 
+//the application. Name the function `activateEvents`.
 
 var CarLot = (function(originalCarLot) {
   originalCarLot.activateEvents = function() {
-    console.log("activateEvents IIFE working.");
-    selectCar();
-    // bindDescriptionToInput(car, description);
+    let cars = document.getElementsByClassName("car");
+    let descriptions = document.getElementsByClassName("description");
+    for (let i = 0; i < cars.length; i++) {
+      let car = cars[i];
+      let description = descriptions[i];
+      CarLot.selectCar();
+      CarLot.bindDescriptionToInput(car, description);
+    }
   }
-
   return originalCarLot;
 })(CarLot || {});
