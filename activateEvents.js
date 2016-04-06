@@ -4,15 +4,16 @@
 //the application. Name the function `activateEvents`.
 
 var CarLot = (function(originalCarLot) {
-  originalCarLot.activateEvents = function() {
-    let cars = document.getElementsByClassName("car");
-    let descriptions = document.getElementsByClassName("description");
-    for (let i = 0; i < cars.length; i++) {
-      let car = cars[i];
-      let description = descriptions[i];
-      CarLot.selectCar();
-      CarLot.bindDescriptionToInput(car, description);
+    originalCarLot.activateEvents = function() {
+        let cars = document.getElementsByClassName("car");
+        let descriptions = document.getElementsByClassName(
+            "description");
+        for (let i = 0; i < cars.length; i++) {
+            let car = cars[i];
+            let description = descriptions[i];
+            CarLot.selectCar();
+            CarLot.bindDescriptionToInput(car, description);
+        }
     }
-  }
-  return originalCarLot;
+    return originalCarLot;
 })(CarLot || {});

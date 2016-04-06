@@ -25,4 +25,3 @@ var CarLot = (function() {
     };
 })(CarLot || {});
 
-
