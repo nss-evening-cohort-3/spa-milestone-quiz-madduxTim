@@ -5,15 +5,8 @@
 
 var CarLot = (function(originalCarLot) {
     originalCarLot.activateEvents = function() {
-        let cars = document.getElementsByClassName("car");
-        let descriptions = document.getElementsByClassName(
-            "description");
-        for (let i = 0; i < cars.length; i++) {
-            let car = cars[i];
-            let description = descriptions[i];
-            CarLot.selectCar();
-            CarLot.bindDescriptionToInput(car, description);
-        }
+        CarLot.selectCar();
+        CarLot.bindDescriptionToInput();
     }
     return originalCarLot;
 })(CarLot || {});

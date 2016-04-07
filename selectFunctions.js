@@ -11,8 +11,7 @@ var CarLot = (function(originalCarLot) {
     originalCarLot.selectCar = function() {
             let input = document.getElementById("input");
             let cars = document.getElementsByClassName("car");
-            let descriptions = document.getElementsByClassName(
-                "description");
+            let descriptions = document.getElementsByClassName("description");
             for (let i = 0; i < cars.length; i++) {
                 let car = cars[i];
                 let description = descriptions[i];
@@ -30,18 +29,15 @@ var CarLot = (function(originalCarLot) {
                 cars[i].classList.remove("selected");
             }
         },
-        originalCarLot.bindDescriptionToInput = function(car,
-            description) {
+        originalCarLot.bindDescriptionToInput = function(car, description) {
             let cars = document.getElementsByClassName("car");
-            let descriptions = document.getElementsByClassName(
-                "description");
+            let descriptions = document.getElementsByClassName("description");
             for (let i = 0; i < cars.length; i++) {
                 let car = cars[i];
                 let description = descriptions[i];
-                input.addEventListener("keyup", function(event) {
+                input.addEventListener("keydown", function(event) {
                     if (car.classList.contains("selected")) {
-                        let userDescription = event.currentTarget
-                            .value;
+                        let userDescription = event.currentTarget.value;
                         description.innerHTML = userDescription;
                     }
                 })

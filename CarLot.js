@@ -7,10 +7,9 @@
 
 var CarLot = (function() {
     var inventory = [];
-
     return {
         getInventory: function() {
-            return inventory;
+            return CarLot.loadInventory(CarLot.getInventory);
         },
         loadInventory: function(accessInventory) {
             var inventoryLoader = new XMLHttpRequest();
@@ -24,4 +23,3 @@ var CarLot = (function() {
         }
     };
 })(CarLot || {});
-
