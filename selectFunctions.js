@@ -8,40 +8,21 @@
 //     - A color name.
 
 var CarLot = (function(originalCarLot) {
-    originalCarLot.selectCar = function() {
-            let input = document.getElementById("input");
-            let cars = document.getElementsByClassName("car");
-            let descriptions = document.getElementsByClassName("description");
-            for (let i = 0; i < cars.length; i++) {
-                let car = cars[i];
-                let description = descriptions[i];
-                car.addEventListener("click", function() {
-                    CarLot.removeSelected();
-                    car.classList.add("selected");
-                    input.value = "";
-                    input.focus();
-                });
-            }
-        },
-        originalCarLot.removeSelected = function() {
-            let cars = document.getElementsByClassName("car");
-            for (let i = 0; i < cars.length; i++) {
-                cars[i].classList.remove("selected");
-            }
-        },
-        originalCarLot.bindDescriptionToInput = function(car, description) {
-            let cars = document.getElementsByClassName("car");
-            let descriptions = document.getElementsByClassName("description");
-            for (let i = 0; i < cars.length; i++) {
-                let car = cars[i];
-                let description = descriptions[i];
-                input.addEventListener("keydown", function(event) {
-                    if (car.classList.contains("selected")) {
-                        let userDescription = event.currentTarget.value;
-                        description.innerHTML = userDescription;
-                    }
-                })
-            }
-        }
+    originalCarLot.selectCar = function(car, backgroundColor) {
+        let input = document.getElementById("input");
+        originalCarLot.unselectCar();
+        car.setAttribute("id", "selected");
+        car.setAttribute("style", `border:3px solid red; text-align:center; background-color:${backgroundColor}`);
+        input.focus();
+    },
+    originalCarLot.unselectCar = function() {
+        let cars = document.getElementsByClassName("car");
+        for (let i = 0; i < cars.length; i++) { 
+            let car = cars[i];
+            if (car.id === "selected") {
+                originalCarLot.loadInventory(populatePage);
+            };
+        };
+    }
     return originalCarLot;
 })(CarLot || {});

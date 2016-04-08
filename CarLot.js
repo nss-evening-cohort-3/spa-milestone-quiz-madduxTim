@@ -9,7 +9,7 @@ var CarLot = (function() {
     var inventory = [];
     return {
         getInventory: function() {
-            return CarLot.loadInventory(CarLot.getInventory);
+            return inventory;
         },
         loadInventory: function(accessInventory) {
             var inventoryLoader = new XMLHttpRequest();
