@@ -12,15 +12,19 @@ var CarLot = (function(originalCarLot) {
         let input = document.getElementById("input");
         originalCarLot.unselectCar();
         car.setAttribute("id", "selected");
-        car.setAttribute("style", `border:3px solid red; text-align:center; background-color:${backgroundColor}`);
+        car.setAttribute("style", `border-width:5px; text-align:center; background-color:${backgroundColor}`);
         input.focus();
     },
     originalCarLot.unselectCar = function() {
         let cars = document.getElementsByClassName("car");
+        let inventory = CarLot.getInventory();
         for (let i = 0; i < cars.length; i++) { 
+            let carColor = inventory[i].color;
             let car = cars[i];
             if (car.id === "selected") {
-                originalCarLot.loadInventory(populatePage);
+                document.getElementById("input").value = "";
+                car.removeAttribute("id");
+                car.setAttribute("style", `border-color:${carColor}; text-align:center; background-color:white`)
             };
         };
     }
