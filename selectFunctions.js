@@ -12,7 +12,9 @@ var CarLot = (function(originalCarLot) {
         let input = document.getElementById("input");
         originalCarLot.unselectCar();
         car.setAttribute("id", "selected");
-        car.setAttribute("style", `border-width:5px; text-align:center; background-color:${backgroundColor}`);
+        car.setAttribute("style", `border-width:7px; 
+            border-color:${car.childNodes[4].childNodes[0].nextSibling.textContent}; 
+            border-style:dotted; text-align:center; background-color:${backgroundColor}`);
         input.focus();
     },
     originalCarLot.unselectCar = function() {
@@ -24,7 +26,8 @@ var CarLot = (function(originalCarLot) {
             if (car.id === "selected") {
                 document.getElementById("input").value = "";
                 car.removeAttribute("id");
-                car.setAttribute("style", `border-color:${carColor}; text-align:center; background-color:white`)
+                car.setAttribute("style", `border-color:${carColor}; border-style:solid; 
+                    text-align:center; background-color:white`)
             };
         };
     }
