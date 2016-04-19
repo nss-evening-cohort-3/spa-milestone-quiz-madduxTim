@@ -1,0 +1,31 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Accord",
+      "year": "2010",
+      "price": "10999",
+      "color": "GoldenRod",
+      "purchased": false,
+      "description": "This is a pretty sweet whip. AC, moonroof, all the stuff. Comes with a childseat and a child."
+    },
+    {
+      "make": "Lincoln",
+      "model": "Towncar",
+      "year": "2002",
+      "price": "3999",
+      "color": "Green",
+      "purchased": false,
+      "description": "This is a former gypsy cab. Lots of character. It has been auctioned off at least four times by the Metro Police Dept."
+    }
+  ]
+}
